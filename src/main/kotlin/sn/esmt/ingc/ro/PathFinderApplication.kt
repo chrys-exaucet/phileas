@@ -1,9 +1,9 @@
 package sn.esmt.ingc.ro;
 
 class PathFinderApplication {
-
-    fun main(vararg args: String) {}
-
+    companion object {
+        @JvmStatic fun main(vararg args: String) {
+            println("performing Djikstra's algorithm...")
+        }
+    }
 }
-
-
