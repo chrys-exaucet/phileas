@@ -1,4 +1,4 @@
-#Welcome to the PathFinder Pro helpbook! 
+# Welcome to the PathFinder Pro helpbook! 
 
  
 This document contains information on: 
@@ -9,7 +9,7 @@ This document contains information on:
 
  
 
-##Getting Started 
+## Getting Started 
 
  
 
@@ -27,7 +27,7 @@ Keep in mind that for each algorithm, some conditions will have to be validated 
 
  
 
-##Details on PathFinder Pro project 
+## Details on PathFinder Pro project 
 
  
 PathFinder Pro was developped using Java, a widespread programming language, thus allowing students to easily study the program and try out different things for educational purposes.
