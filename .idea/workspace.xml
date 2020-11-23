@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidGradleBuildConfiguration">
+    <option name="SYNC_PROJECT_BEFORE_BUILD" value="true" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:path-finder" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="402c38a3-4ed1-406c-8163-cacdb9c864f8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
+        <option value="package-info" />
+        <option value="Kotlin Script" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="chrys-exaucet" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/kotlin/sn/esmt/ingc/ro/graphs/algo/BellManFordAlgorithmProvider.kt" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="15" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kGOuVyareuYQUUYY2db4vq912T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.3789581" />
+    <property name="recentsLimit" value="10" />
+    <property name="settings.editor.selected.configurable" value="xml.defaultSchemas" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="sn.esmt.ingc.ro.graphs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sn.esmt.ingc.ro.ui.Main" />
+      <module name="shortest-path.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sn.esmt.ingc.ro.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/Chrys Exaucet/IdeaProjects/path-finder [cleanIdea idea]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="cleanIdea" />
+            <option value="idea" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="PathFinderApplication" type="JetRunConfigurationType" nameIsGenerated="true">
+      <module name="shortest-path.main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="sn.esmt.ingc.ro.PathFinderApplication" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="path-finder" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.C:/Users/Chrys Exaucet/IdeaProjects/path-finder [cleanIdea idea]" />
+      <item itemvalue="Kotlin.PathFinderApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.C:/Users/Chrys Exaucet/IdeaProjects/path-finder [cleanIdea idea]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="402c38a3-4ed1-406c-8163-cacdb9c864f8" name="Default Changelist" comment="" />
+      <created>1605323705651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605323705651</updated>
+    </task>
+    <task id="LOCAL-00001" summary="refactored Djikstra's algorithm">
+      <created>1605542020283</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605542020283</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Bellman Algorithm">
+      <created>1605708373365</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605708373365</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added GUI">
+      <created>1606156476382</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606156476382</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="set up Djikstra's algorithm" />
+    <MESSAGE value="refactored Djikstra's algorithm" />
+    <MESSAGE value="Bellman Algorithm" />
+    <MESSAGE value="added GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="added GUI" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1605702440407">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.738@0.0.1366.738" timestamp="1605702440407" />
+    <state x="137" y="0" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606153963273">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="0" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1606153963273" />
+    <state x="474" y="84" key="#com.intellij.ide.util.MemberChooser" timestamp="1605716057462">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="474" y="84" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1605716057462" />
+    <state x="419" y="158" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605490706190">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="419" y="158" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1605490706190" />
+    <state x="460" y="254" width="528" height="230" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1605475972953">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="460" y="254" width="528" height="230" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.738@0.0.1366.738" timestamp="1605475972953" />
+    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1606156463838">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1606156463838" />
+    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog" timestamp="1605793639356">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1605793639355" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1605793087872">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1605793087872" />
+    <state x="275" y="273" key="Github.CreateGistDialog" timestamp="1605467840794">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="273" key="Github.CreateGistDialog/0.0.1366.738@0.0.1366.738" timestamp="1605467840794" />
+    <state width="1367" height="288" key="GridCell.Tab.0.bottom" timestamp="1606156399873">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="288" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1606156399873" />
+    <state width="1367" height="288" key="GridCell.Tab.0.center" timestamp="1606156399871">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="288" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1606156399871" />
+    <state width="1367" height="288" key="GridCell.Tab.0.left" timestamp="1606156399870">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="288" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1606156399870" />
+    <state width="1367" height="288" key="GridCell.Tab.0.right" timestamp="1606156399872">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="288" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1606156399872" />
+    <state width="1367" height="288" key="GridCell.Tab.1.bottom" timestamp="1606156399875">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="288" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1606156399875" />
+    <state width="1367" height="288" key="GridCell.Tab.1.center" timestamp="1606156399874">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="288" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1606156399874" />
+    <state width="1367" height="288" key="GridCell.Tab.1.left" timestamp="1606156399873">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="288" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1606156399873" />
+    <state width="1367" height="288" key="GridCell.Tab.1.right" timestamp="1606156399875">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1367" height="288" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1606156399875" />
+    <state x="263" y="111" key="IDE.errors.dialog" timestamp="1605491759851">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="263" y="111" key="IDE.errors.dialog/0.0.1366.738@0.0.1366.738" timestamp="1605491759851" />
+    <state x="163" y="0" width="1196" height="708" key="SettingsEditor" timestamp="1606154396827">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="163" y="0" width="1196" height="708" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1606154396827" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1606153283158">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="498" height="445" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1606153283158" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1606156500486">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1606156500486" />
+    <state x="318" y="62" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1606154465104">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="318" y="62" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1366.738@0.0.1366.738" timestamp="1606154465104" />
+    <state x="492" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605793149844">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="492" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1605793149844" />
+    <state x="244" y="97" width="877" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606155317342">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="244" y="97" width="877" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.738@0.0.1366.738" timestamp="1606155317342" />
+    <state x="484" y="275" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605542942813">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="484" y="275" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.738@0.0.1366.738" timestamp="1605542942813" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1605743408100">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1605743408100" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1605489354430">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1605489354430" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/sn/esmt/ingc/ro/ui/Main.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/sn/esmt/ingc/ro/ui/Main.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
