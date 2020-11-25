@@ -1,29 +1,22 @@
 package sn.esmt.ingc.ro.ui;
 
-import javafx.geometry.Point2D;
+
 import javafx.scene.Group;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
-import javafx.scene.shape.PathElement;
-
 import static java.lang.Double.parseDouble;
-
-
 
 public class GraphicEdge extends Path implements Runnable {
 	protected int idSource, idTarget;
 	protected TextField weight;
 	private MouseEvent ev;
-
 	protected double startX, startY, endX, endY;
 
 	public GraphicEdge() {
 		super();
-
 	}
 
 	public GraphicEdge(int idSource, double startX, double startY) {
@@ -33,9 +26,15 @@ public class GraphicEdge extends Path implements Runnable {
 		this.getElements().add(new MoveTo(startX, startY));
 		this.idSource = idSource;
 		weight=new TextField();
+		this.weight.setEditable(true);
+		this.weight.setPrefColumnCount(1);
 
+		this.weight.setPrefWidth(50);
+		this.weight.setPrefHeight(10);
+
+		this.weight.setStyle("-fx-background-color:transparent;");
 	}
-
+	
 	public GraphicEdge(int idSource, int idTarget, double weight, double startX, double startY, double endX,
 			double endY) {
 		super();
@@ -46,8 +45,14 @@ public class GraphicEdge extends Path implements Runnable {
 		this.startY = startY;
 		this.endX = endX;
 		this.endY = endY;
+		this.weight.setEditable(true);
+		this.weight.setPrefColumnCount(1);
+
+		this.weight.setPrefWidth(50);
+		this.weight.setPrefHeight(10);
+
+		this.weight.setStyle("-fx-background-color:transparent;");
 	}
-	// public
 
 	public GraphicEdge(int idSource, double weight, double startX, double startY, double endX, double endY) {
 		super();
@@ -57,6 +62,13 @@ public class GraphicEdge extends Path implements Runnable {
 		this.startY = startY;
 		this.endX = endX;
 		this.endY = endY;
+		this.weight.setEditable(true);
+		this.weight.setPrefColumnCount(1);
+
+		this.weight.setPrefWidth(50);
+		this.weight.setPrefHeight(10);
+
+		this.weight.setStyle("-fx-background-color:transparent;");
 	}
 
 	public int getIdSource() {
@@ -103,20 +115,11 @@ public class GraphicEdge extends Path implements Runnable {
 		if(this.weight==null)this.weight=new TextField();
 		this.weight.setText(String.valueOf(weight));
 		this.getElements().set(1, new LineTo(endX, endY));
+		this.weight.setLayoutX((startX+endX)/2);
+		this.weight.setLayoutY((startY+endY)/2);
 	}
 	
-	public void putWeight( Group group ) {
-		weight.setEditable(true);
-		weight.setPrefColumnCount(1);
-
-		weight.setPrefWidth(50);
-		weight.setPrefHeight(10);
-
-		weight.setStyle("-fx-background-color:transparent;");
-
-
-		weight.setLayoutX((startX+endX)/2);
-		weight.setLayoutY((startY+endY)/2);
+	public void putWeight( Group group ) {	
 		
 		group.getChildren().add(weight);
 	}

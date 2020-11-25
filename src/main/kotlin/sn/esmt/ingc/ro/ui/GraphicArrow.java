@@ -15,15 +15,17 @@ public class GraphicArrow extends GraphicEdge {
 	}
 
 	public GraphicArrow(int idSource, double startX, double startY) {
-		super();
-		this.startX = startX;
-		this.startY = startY;
-		this.getElements().add(new MoveTo(startX, startY));
-		this.idSource = idSource;
+		super(idSource, startX, startY);
 
 	}
+	
+	
+	public void setLastPoint(int idTarget, double endX, double endY,double weight) {
+		super.setLastPoint(idTarget, endX, endY, weight);
+		this.drawHeadArrow(idTarget, endX, endY);
+	}
 
-	public void drawHeadArrow(int idTarget, double endX, double endY) {
+	private void drawHeadArrow(int idTarget, double endX, double endY) {
 		this.idTarget = idTarget;
 		this.endX = endX;
 		this.endY = endY;

@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import sn.esmt.ingc.ro.ui.view.PrimaryNodeController;
 
 public class Main extends Application {
 
@@ -36,13 +35,10 @@ public class Main extends Application {
 
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("/sn/esmt/java/ro/ui/view/PrimaryNode.fxml"));
+			loader.setLocation(Main.class.getResource("/sn/esmt/ingc/ro/ui/view/PrimaryNode.fxml"));
 			BorderPane node = loader.load();
 			// node.getCenter().
 			this.root.setCenter(node);
-
-			PrimaryNodeController controller = loader.getController();
-			controller.setMainApp(this);
 		} catch (IOException e) {
 
 			e.printStackTrace();
@@ -54,7 +50,7 @@ public class Main extends Application {
 
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("sn/esmt/ingc/ro/ui/view/Root.fxml"));
+			loader.setLocation(Main.class.getResource("/sn/esmt/ingc/ro/ui/view/Root.fxml"));
 			this.root = loader.load();
 			Scene scene = new Scene(this.root);
 			this.primaryStage.setScene(scene);
