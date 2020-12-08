@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -20,14 +19,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="500.0" prefWidth="700.0"
-	stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171"
-	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="sn.esmt.ingc.ro.ui.view.PrimaryNodeController">
+<BorderPane prefHeight="500.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.esmt.ingc.ro.ui.view.PrimaryNodeController">
 	<left>
-		<VBox alignment="CENTER_LEFT" prefHeight="465.0"
-			prefWidth="138.0" style="-fx-background-color: ffffff;"
-			BorderPane.alignment="CENTER">
+		<VBox alignment="CENTER_LEFT" prefHeight="465.0" prefWidth="138.0" style="-fx-background-color: rgb(132,149,239);" BorderPane.alignment="CENTER">
 			<children>
 				<VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
 					<children>
@@ -38,43 +32,29 @@
 						</Label>
 						<GridPane onDragDetected="#draggedEdge">
 							<columnConstraints>
-								<ColumnConstraints hgrow="SOMETIMES"
-									maxWidth="59.0" minWidth="10.0" prefWidth="47.0" />
-								<ColumnConstraints hgrow="SOMETIMES"
-									maxWidth="89.0" minWidth="10.0" prefWidth="81.0" />
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="59.0" minWidth="10.0" prefWidth="47.0" />
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="81.0" />
 							</columnConstraints>
 							<rowConstraints>
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 							</rowConstraints>
 							<children>
-								<ImageView fx:id="noeud" fitHeight="32.0"
-									fitWidth="38.0" onDragDetected="#dragged" pickOnBounds="true"
-									preserveRatio="true">
+								<ImageView fx:id="noeud" fitHeight="32.0" fitWidth="38.0" onDragDetected="#dragged" pickOnBounds="true" preserveRatio="true">
 									<image>
 										<Image url="@ellipse.png" />
 									</image>
 								</ImageView>
-								<ImageView fx:id="arrow" fitHeight="32.0"
-									fitWidth="32.0" onDragDetected="#draggedArrow"
-									pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+								<ImageView fx:id="arrow" fitHeight="32.0" fitWidth="32.0" onDragDetected="#draggedArrow" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
 									<image>
 										<Image url="@arrow.png" />
 									</image>
 								</ImageView>
-								<Label fx:id="lblNoeud" onDragDetected="#dragged"
-									text="Noeud" GridPane.columnIndex="1" />
-								<Label fx:id="lblArrow" onDragDetected="#draggedArrow"
-									text="Arc" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-								<Label fx:id="lblArrete" onDragDetected="#draggedEdge"
-									text="Arrêtes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-								<ImageView fx:id="arrete" fitHeight="32.0"
-									fitWidth="32.0" onDragDetected="#draggedEdge"
-									pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+								<Label fx:id="lblNoeud" onDragDetected="#dragged" text="Noeud" GridPane.columnIndex="1" />
+								<Label fx:id="lblArrow" onDragDetected="#draggedArrow" text="Arc" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+								<Label fx:id="lblArrete" onDragDetected="#draggedEdge" text="Arrête" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+								<ImageView fx:id="arrete" fitHeight="32.0" fitWidth="32.0" onDragDetected="#draggedEdge" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
 									<image>
 										<Image url="@ligne.png" />
 									</image>
@@ -101,24 +81,17 @@
 						</Label>
 						<GridPane alignment="CENTER">
 							<columnConstraints>
-								<ColumnConstraints hgrow="SOMETIMES"
-									minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 							</columnConstraints>
 							<rowConstraints>
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 							</rowConstraints>
 							<children>
-								<RadioButton fx:id="bellmanFord"
-									mnemonicParsing="false" text="Bellman-Ford" />
-								<RadioButton fx:id="djikstra"
-									mnemonicParsing="false" text="Djikstra" GridPane.rowIndex="1" />
-								<RadioButton fx:id="floyd" mnemonicParsing="false"
-									text="Floyd" GridPane.rowIndex="2" />
+								<RadioButton fx:id="bellmanFord" mnemonicParsing="false" text="Bellman-Ford" />
+								<RadioButton fx:id="djikstra" mnemonicParsing="false" text="Djikstra" GridPane.rowIndex="1" />
+								<RadioButton fx:id="floyd" mnemonicParsing="false" text="Floyd" GridPane.rowIndex="2" />
 							</children>
 							<VBox.margin>
 								<Insets left="20.0" />
@@ -128,8 +101,7 @@
 				</VBox>
 				<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
 					<children>
-						<ImageView fitHeight="155.0" fitWidth="138.0"
-							pickOnBounds="true" preserveRatio="true">
+						<ImageView fitHeight="155.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
 							<image>
 								<Image url="@Art.png" />
 							</image>
@@ -139,104 +111,39 @@
 			</children>
 		</VBox>
 	</left>
-	<right>
-		<VBox prefHeight="465.0" prefWidth="147.0"
-			style="-fx-background-color: ffffff;" BorderPane.alignment="CENTER">
-			<children>
-				<VBox prefHeight="244.0" prefWidth="138.0">
-					<children>
-						<GridPane alignment="CENTER">
-							<columnConstraints>
-								<ColumnConstraints hgrow="SOMETIMES"
-									minWidth="10.0" prefWidth="100.0" />
-							</columnConstraints>
-							<rowConstraints>
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-								<RowConstraints minHeight="10.0"
-									prefHeight="30.0" vgrow="SOMETIMES" />
-							</rowConstraints>
-							<children>
-								<Label alignment="CENTER" prefHeight="17.0"
-									prefWidth="139.0" text="Arc" textAlignment="CENTER"
-									wrapText="true" />
-								<Label text="B vers" GridPane.rowIndex="1" />
-								<ComboBox prefWidth="150.0" GridPane.rowIndex="2" />
-								<Label text="Valeur" GridPane.rowIndex="3" />
-								<ComboBox prefWidth="150.0" GridPane.rowIndex="4" />
-							</children>
-						</GridPane>
-					</children>
-				</VBox>
-				<VBox prefHeight="287.0" prefWidth="138.0">
-					<children>
-						<Label text="Chemin de" />
-						<ComboBox prefWidth="150.0" />
-						<Label text="A" />
-						<ComboBox prefWidth="150.0" />
-						<Label fx:id="lblMouse" blendMode="MULTIPLY"
-							prefHeight="107.0" prefWidth="137.0" text="Label" />
-					</children>
-					<VBox.margin>
-						<Insets />
-					</VBox.margin>
-				</VBox>
-			</children>
-			<padding>
-				<Insets left="5.0" right="5.0" />
-			</padding>
-		</VBox>
-	</right>
 	<top>
-		<GridPane prefHeight="53.0" prefWidth="700.0"
-			style="-fx-background-color: rgba(246,246,246,1);"
-			BorderPane.alignment="CENTER">
+		<GridPane prefHeight="53.0" prefWidth="700.0" style="-fx-background-color: rgba(246,246,246,1);" BorderPane.alignment="CENTER">
 			<columnConstraints>
-				<ColumnConstraints hgrow="SOMETIMES"
-					minWidth="10.0" prefWidth="100.0" />
-				<ColumnConstraints hgrow="SOMETIMES"
-					minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 			</columnConstraints>
 			<rowConstraints>
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 			</rowConstraints>
 			<children>
 				<MenuBar style="-fx-background-color: transparent;">
 					<menus>
-						<Menu mnemonicParsing="false" text="File">
+						<Menu mnemonicParsing="false" text="Fichier">
 							<items>
-								<MenuItem mnemonicParsing="false" text="Close" />
+								<MenuItem mnemonicParsing="false" text="Quitter" />
 							</items>
 						</Menu>
-						<Menu mnemonicParsing="false" text="Edit">
+						<Menu mnemonicParsing="false" text="Edition">
 							<items>
 								<MenuItem mnemonicParsing="false" text="Delete" />
 							</items>
 						</Menu>
-						<Menu mnemonicParsing="false" text="Help">
+						<Menu mnemonicParsing="false" text="Aide">
 							<items>
 								<MenuItem mnemonicParsing="false" text="About" />
 							</items>
 						</Menu>
 					</menus>
 				</MenuBar>
-				<HBox alignment="CENTER_RIGHT" prefHeight="100.0"
-					prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1">
+				<HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1">
 					<children>
-						<Button mnemonicParsing="false" prefWidth="77.0"
-							style="-fx-background-color: rgba(132,149,239,1);"
-							text="Résoudre" textFill="WHITE" />
-						<Button mnemonicParsing="false" onAction="#clearCanvas"
-							prefWidth="77.0"
-							style="-fx-background-color: rgba(239,132,157,1);"
-							text="Réinitialiser" textFill="WHITE" />
+						<Button mnemonicParsing="false" onAction="#resoudre" prefWidth="77.0" style="-fx-background-color: rgba(132,149,239,1);" text="Résoudre" textFill="WHITE" />
+						<Button mnemonicParsing="false" onAction="#clearCanvas" prefWidth="77.0" style="-fx-background-color: rgba(239,132,157,1);" text="Réinitialiser" textFill="WHITE" />
 					</children>
 					<padding>
 						<Insets right="20.0" />
@@ -254,19 +161,15 @@
 	<center>
 		<GridPane fx:id="grid" BorderPane.alignment="CENTER">
 			<columnConstraints>
-				<ColumnConstraints hgrow="SOMETIMES"
-					minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 			</columnConstraints>
 			<rowConstraints>
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 			</rowConstraints>
 			<children>
-				<Group fx:id="canvasGrid" onDragDropped="#dragDropped"
-					onDragOver="#dragOver" onMouseMoved="#mouse"
-					GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+				<Group fx:id="canvasGrid" onDragDropped="#dragDropped" onDragOver="#dragOver" onMouseMoved="#mouse" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
 					<children>
-						<Pane fx:id="paneGroup" prefHeight="200.0" prefWidth="200.0" />
+						<Pane fx:id="paneGroup" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
 					</children>
 				</Group>
 			</children>

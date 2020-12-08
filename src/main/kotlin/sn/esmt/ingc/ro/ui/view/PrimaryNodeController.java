@@ -15,16 +15,19 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import sn.esmt.ingc.ro.ui.GraphicArrow;
 import sn.esmt.ingc.ro.ui.GraphicEdge;
 import sn.esmt.ingc.ro.ui.GraphicNode;
 
 public class PrimaryNodeController {
-	// Our custom Data Format
+	// Data Format customizer
 	static final DataFormat NODE = new DataFormat("Noeud");
 	static final DataFormat EDGE = new DataFormat("Edge");
 	static final DataFormat ARROW = new DataFormat("Arrow");
-
+	
+	
+	//Variable lié au chargemnt du du fichier FXML : PrimaryNode
 	@FXML
 	private ImageView noeud;
 
@@ -43,9 +46,7 @@ public class PrimaryNodeController {
 	@FXML
 	private Label lblArrete;
 
-	@FXML
-	private Label lblMouse;
-
+	
 	@FXML
 	private Group canvasGrid;
 
@@ -64,13 +65,20 @@ public class PrimaryNodeController {
 	@FXML
 	private RadioButton floyd;
 
+	
+	// La liste de tous les noeud sur la zone de dessin
 	private ArrayList<GraphicNode> list = new ArrayList<>();
 
+	// Noeud focus par la souris
 	private GraphicNode focusNode;
+	
+	// Permmet d'éviter de mettre dans un meme graphe des flèches et des arrêtes
+	private int mode=0;
 
-
-
+	// Liste de tous les arrêtes ou Fleche(arrow) ( Remarque: GraphicArrow hérite de GraphicEdges) 
 	private ArrayList<GraphicEdge> realEdges=new ArrayList<>();
+	
+	// L'instance du Chemin (ligne ) qu'on veut ajouter
 	private GraphicEdge addPath = null;
 
 	/**
@@ -82,24 +90,24 @@ public class PrimaryNodeController {
 
 	@FXML
 	private void initialize() {
+		
+		// Associe les radio Bouttons
 		ToggleGroup group = new ToggleGroup();
 		group.getToggles().addAll(bellmanFord, djikstra, floyd);
+		// par defaut la radio Bellman Ford est Sélectionner
 		bellmanFord.setSelected(true);
+		
+		//lie la largeur et hauteur  de child(panneGroup) de canvasGrid au parent de canvasGrid qui est grid
 		paneGroup.prefHeightProperty().bind(grid.heightProperty());
-		paneGroup.prefWidthProperty().bind(grid.widthProperty());
-		grid.heightProperty().addListener(e -> {
-			paneGroup.resizeRelocate(grid.getLayoutX(), grid.getLayoutY(), grid.getWidth(), grid.getHeight());
-			canvasGrid.resizeRelocate(grid.getLayoutX(), grid.getLayoutY(), grid.getWidth(), grid.getHeight());
-
-		});
-		grid.widthProperty().addListener(e -> {
-			paneGroup.resizeRelocate(grid.getLayoutX(), grid.getLayoutY(), grid.getWidth(), grid.getHeight());
-			canvasGrid.resizeRelocate(grid.getLayoutX(), grid.getLayoutY(), grid.getWidth(), grid.getHeight());
-
-		});
-		System.out.println(canvasGrid.isAutoSizeChildren() + " " + paneGroup.isResizable() + " " + grid.isResizable());
+		paneGroup.prefWidthProperty().bind(grid.widthProperty());	
 	}
+	
+	
 
+	
+	//Methode referencer dans FXML
+	
+	//Méthode permettant le drag and drop
 	@FXML
 	private void dragged(MouseEvent e) {
 		Dragboard dragboard = noeud.startDragAndDrop(TransferMode.COPY);
@@ -112,21 +120,26 @@ public class PrimaryNodeController {
 
 	@FXML
 	private void draggedArrow(MouseEvent e) {
+		if(mode==2 || mode ==0) {
 		Dragboard dragboard = arrow.startDragAndDrop(TransferMode.COPY);
 		ClipboardContent content = new ClipboardContent();
 		content.put(ARROW, "1");
 		dragboard.setDragView(arrow.getImage());
 		dragboard.setContent(content);
+		}
 		e.consume();
+		
 	}
 
 	@FXML
 	private void draggedEdge(MouseEvent e) {
+		if(mode==1 || mode ==0 ) {
 		Dragboard dragboard = arrete.startDragAndDrop(TransferMode.COPY);
 		ClipboardContent content = new ClipboardContent();
 		content.put(EDGE, "2");
 		dragboard.setDragView(arrete.getImage());
 		dragboard.setContent(content);
+		}
 		e.consume();
 	}
 
@@ -176,7 +189,13 @@ public class PrimaryNodeController {
 		} else if (dragboard.hasContent(ARROW)) {
 			if (focusNode != null) {
 				addPath = new GraphicArrow(focusNode.getIdNode(), focusNode.getCenterX(), focusNode.getCenterY());
+				addPath.setOnMouseClicked(eb->{
+					canvasGrid.getChildren().removeAll((GraphicArrow)eb.getSource(), ((GraphicArrow)eb.getSource()).getWeight());
+				});
+				
 				canvasGrid.getChildren().add(addPath);
+				
+				if(mode!=2)mode=2;
 			}
 		} else if (dragboard.hasContent(EDGE)) {
 			if (focusNode != null) {
@@ -185,6 +204,7 @@ public class PrimaryNodeController {
 					canvasGrid.getChildren().removeAll((GraphicEdge)eb.getSource(), ((GraphicEdge)eb.getSource()).getWeight());
 				});
 				canvasGrid.getChildren().add(addPath);
+				if(mode!=1)mode=1;
 			}
 		}
 		e.setDropCompleted(dragCompleted);
@@ -192,6 +212,8 @@ public class PrimaryNodeController {
 	}
 
 	
+	
+	// Met un noeud sur le group en donnant les coordonnées x et y
 	private void putNode(double x, double y) {
 		countID++;
 		GraphicNode gn = new GraphicNode(x, y, countID);
@@ -220,19 +242,42 @@ public class PrimaryNodeController {
 		GraphicNode target = (GraphicNode) e.getSource();
 		if (addPath != null && addPath.getIdSource() != target.getIdNode()) {
 			if (addPath.getClass().getSimpleName().equals("GraphicEdge")) {
-				addPath.setLastPoint(target.getIdNode(), target.getCenterX(), target.getCenterY(), 100);
+				addPath.setLastPoint(target.getIdNode(), target.getCenterX(), target.getCenterY());
 				addPath.putWeight(canvasGrid);
 				realEdges.add(addPath);
 
 			} else if (addPath.getClass().getSimpleName().equals("GraphicArrow")) {
-				((GraphicArrow) addPath).setLastPoint(target.getIdNode(), target.getCenterX(), target.getCenterY(), 100);
+				((GraphicArrow) addPath).setLastPoint(target.getIdNode(), target.getCenterX(), target.getCenterY());
 				addPath.putWeight(canvasGrid);
 				realEdges.add(addPath);
 			}
 			addPath = null;
 		}
 	}
+	
+	
+	//Méthode qui s'effectue quand on appuies sur le boutton résoudre
+	@FXML
+	private void resoudre() {
+		
+		colorLine(list.get(0), list.get(1));
+	}
+	
+	/*
+	 * Méthode permettant  de mettre la couleur verte sur un chemin en renseignant deux noeuds
+	 * ( Astuce peut etre surchargé avec les identifiants unique des noeuds)
+	 * */
+	private void colorLine(GraphicNode firstNode, GraphicNode secondNode) {
+		for(GraphicEdge edge : realEdges) {
+			if((edge.getIdSource()==firstNode.getIdNode() || edge.getIdSource()==secondNode.getIdNode()) 
+					&& (edge.getIdTarget()==firstNode.getIdNode() || edge.getIdTarget()==secondNode.getIdNode()) ) {
+				edge.setStroke(Color.GREEN);
+			}
+		}
+		
+	}
 
+	
 	@FXML
 	private void mouse(MouseEvent mouseEvent) {
 
@@ -255,10 +300,12 @@ public class PrimaryNodeController {
 		mouseEvent.consume();
 	}
 
+	// Methode appelé lors de l'appui du boutton "Reinitialiser" Permet d'effacer toutes les figures
 	@FXML
 	private void clearCanvas() {
 		countID = 0;
 		addPath=null;
+		mode=0;
 		list.clear();
 		realEdges.clear();
 		canvasGrid.getChildren().remove(1, canvasGrid.getChildren().size());

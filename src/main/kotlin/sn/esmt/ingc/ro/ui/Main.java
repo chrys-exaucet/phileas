@@ -10,41 +10,44 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+	
 	private Stage primaryStage;
 
-	public Stage getPrimaryStage() {
-		return primaryStage;
-	}
-
-	public void setPrimaryStage(Stage primaryStage) {
-		this.primaryStage = primaryStage;
-	}
-
+	
 	private BorderPane root;
 
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
+		
+		//Met le titre de la fenêtre
 		this.primaryStage.setTitle("Shortest Path");
+		
 		initialize();
+		
 		setNode();
+		
+		//affiche la fenêtre
 		primaryStage.show();
+		
 	}
 
+	//Charge le Noeud Primaire
 	private void setNode() {
 
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/sn/esmt/ingc/ro/ui/view/PrimaryNode.fxml"));
 			BorderPane node = loader.load();
-			// node.getCenter().
 			this.root.setCenter(node);
 		} catch (IOException e) {
 
 			e.printStackTrace();
 		}
 	}
-
+	
+	
+	// Charge la racine 
 	private void initialize() {
 
 
@@ -63,4 +66,14 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
+	//Getters and Setters
+	public Stage getPrimaryStage() {
+		return primaryStage;
+	}
+
+	public void setPrimaryStage(Stage primaryStage) {
+		this.primaryStage = primaryStage;
+	}
+
 }

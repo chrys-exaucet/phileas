@@ -1,3 +1,4 @@
+
 package sn.esmt.ingc.ro;
 
 class PathFinderApplication {
