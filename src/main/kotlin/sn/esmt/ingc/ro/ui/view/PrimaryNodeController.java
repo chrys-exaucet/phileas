@@ -21,6 +21,7 @@ import sn.esmt.ingc.ro.ui.GraphicEdge;
 import sn.esmt.ingc.ro.ui.GraphicNode;
 
 public class PrimaryNodeController {
+	
 	// Data Format customizer
 	static final DataFormat NODE = new DataFormat("Noeud");
 	static final DataFormat EDGE = new DataFormat("Edge");
